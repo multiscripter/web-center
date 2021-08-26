@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=0.75, maximum-scale=1, initial-scale=1" />
+    <title>Поиск товара</title>
+    <link href="./front/css/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="./front/css/styles.css" type="text/css" rel="stylesheet" />
+    <script src="./front/js/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="./front/js/core.js" type="text/javascript"></script>
+</head>
+<body>
+    <main class="container">
+        <div class="row">
+            <div class="col">
+                <form class="form-search js-form-search">
+                    <input class="form-control form-input-text js-form-text" placeholder="Введите название товара" />
+                    <input class="btn btn-primary form-submit" type="submit" value="НАЙТИ" />
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <span class="product-list-empty js-product-list-empty d-none">Ничего не&nbsp;найдено.</span>
+                <ul class="list product-list js-product-list d-none">
+                    <li class="list-item list-header-box">
+                        <ul class="list list-header-list">
+                            <li class="list-item list-header-item">Наименование</li>
+                            <li class="list-item list-header-item">Доступное количество</li>
+                            <li class="list-item list-header-item">Цена</li>
+                        </ul>
+                    </li>
+                    <li class="list-item list-body-box js-item js-item-tpl">
+                        <ul class="list list-body-list">
+                            <li class="list-item list-body-item">
+                                <span class="product-item-label">Наименование</span>
+                                <span class="product-item-value js-name"></span>
+                            </li>
+                            <li class="list-item list-body-item">
+                                <span class="product-item-label">Доступное количество</span>
+                                <span class="product-item-value js-quantity"></span>
+                            </li>
+                            <li class="list-item list-body-item">
+                                <span class="product-item-label">Цена</span>
+                                <span class="product-item-value js-price"></span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer class="container">
+        <div class="row">
+            <div class="col js-logger">
+                <input class="btn btn-primary js-logger-btn" type="button" value="Записать логи в базу" />
+                <span class="log-status js-logger-status invisible">Записано строк: </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
